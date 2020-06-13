@@ -39,12 +39,13 @@ public class Main {
     public static int findMin(int[] arr){
         // initialize the variable minValue to the min value of an integer
         // so that no errors would occur
-        int minValue = Integer.MIN_VALUE;
+        int minValue = Integer.MAX_VALUE;
 
         // iterate through the whole array starting with 1
-        // and compare whether the current value arr[i] is less than arr[i-1]
-        for(int i = 1; i < arr.length; i++){
-            if(arr[i] < arr[i-1]){
+        // and compare whether the current value arr[i] is less than minValue
+        for(int i = 0; i < arr.length-1; i++){
+
+            if(arr[i] < minValue){
                 minValue = arr[i];
             }
         }
